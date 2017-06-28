@@ -3,6 +3,17 @@ body {
   font-size: 16px;
   color: #444444;
 }
+.author {
+  text-align: center;
+}
+.github {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+a {
+  color: #000000;
+}
 button {
   border: 0;
   border-radius: 5px;
