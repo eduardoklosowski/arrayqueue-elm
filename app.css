@@ -1,0 +1,78 @@
+body {
+  font-family: sans;
+  font-size: 16px;
+  color: #444444;
+}
+button {
+  border: 0;
+  border-radius: 5px;
+  background-color: #888888;
+  padding: 10px;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
+}
+input {
+  border: 1px solid #888888;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 20px;
+}
+fieldset {
+  border: 1px solid #888888;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+fieldset > legend {
+  border-radius: 5px;
+  background-color: #dddddd;
+  padding: 5px;
+  font-weight: bold;
+}
+fieldset > .content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+fieldset > .content > div {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.operation {
+  display: flex;
+  flex-direction: column;
+}
+.operation input {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.operation button {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.queue-element {
+  margin: 10px;
+}
+.queue-element .queue-value {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #888888;
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+.queue-element .queue-pointers {
+  text-align: center;
+}
+.pointer {
+  width: 10px;
+  border-radius: 10px;
+  background-color: #888888;
+  padding: 0 5px;
+  color: #ffffff;
+  font-weight: bold;
+}
