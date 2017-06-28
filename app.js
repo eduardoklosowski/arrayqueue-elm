@@ -8748,11 +8748,79 @@ var _eduardoklosowski$arrayqueue_elm$Main$view = function (model) {
 		{ctor: '[]'},
 		{
 			ctor: '::',
-			_0: _eduardoklosowski$arrayqueue_elm$Main$displayOperationsList(model),
+			_0: A2(
+				_elm_lang$html$Html$a,
+				{
+					ctor: '::',
+					_0: _elm_lang$html$Html_Attributes$href('https://github.com/eduardoklosowski/arrayqueue-elm'),
+					_1: {
+						ctor: '::',
+						_0: _elm_lang$html$Html_Attributes$target('_blank'),
+						_1: {ctor: '[]'}
+					}
+				},
+				{
+					ctor: '::',
+					_0: A2(
+						_elm_lang$html$Html$img,
+						{
+							ctor: '::',
+							_0: _elm_lang$html$Html_Attributes$class('github'),
+							_1: {
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$src('https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67'),
+								_1: {
+									ctor: '::',
+									_0: _elm_lang$html$Html_Attributes$alt('Fork me on GitHub'),
+									_1: {ctor: '[]'}
+								}
+							}
+						},
+						{ctor: '[]'}),
+					_1: {ctor: '[]'}
+				}),
 			_1: {
 				ctor: '::',
-				_0: _eduardoklosowski$arrayqueue_elm$Main$displayQueue(model.queue),
-				_1: {ctor: '[]'}
+				_0: _eduardoklosowski$arrayqueue_elm$Main$displayOperationsList(model),
+				_1: {
+					ctor: '::',
+					_0: _eduardoklosowski$arrayqueue_elm$Main$displayQueue(model.queue),
+					_1: {
+						ctor: '::',
+						_0: A2(
+							_elm_lang$html$Html$div,
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html_Attributes$class('author'),
+								_1: {ctor: '[]'}
+							},
+							{
+								ctor: '::',
+								_0: _elm_lang$html$Html$text('Feito por '),
+								_1: {
+									ctor: '::',
+									_0: A2(
+										_elm_lang$html$Html$a,
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html_Attributes$href('https://github.com/eduardoklosowski'),
+											_1: {
+												ctor: '::',
+												_0: _elm_lang$html$Html_Attributes$target('_blank'),
+												_1: {ctor: '[]'}
+											}
+										},
+										{
+											ctor: '::',
+											_0: _elm_lang$html$Html$text('Eduardo Klosowski'),
+											_1: {ctor: '[]'}
+										}),
+									_1: {ctor: '[]'}
+								}
+							}),
+						_1: {ctor: '[]'}
+					}
+				}
 			}
 		});
 };
