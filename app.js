@@ -8502,6 +8502,10 @@ var _eduardoklosowski$arrayqueue_elm$Main$front = function (queue) {
 	}
 };
 var _eduardoklosowski$arrayqueue_elm$Main$dequeue = function (queue) {
+	var newHead = A2(
+		_elm_lang$core$Basics_ops['%'],
+		queue.head + 1,
+		_elm_lang$core$Array$length(queue.array));
 	var e = _eduardoklosowski$arrayqueue_elm$Main$front(queue);
 	var _p8 = e;
 	if (_p8.ctor === 'Just') {
@@ -8512,7 +8516,7 @@ var _eduardoklosowski$arrayqueue_elm$Main$dequeue = function (queue) {
 				queue,
 				{
 					array: A3(_elm_lang$core$Array$set, queue.head, _elm_lang$core$Maybe$Nothing, queue.array),
-					head: queue.head + 1,
+					head: newHead,
 					size: queue.size - 1
 				})
 		};
@@ -8523,10 +8527,10 @@ var _eduardoklosowski$arrayqueue_elm$Main$dequeue = function (queue) {
 var _eduardoklosowski$arrayqueue_elm$Main$enqueue = F2(
 	function (n, queue) {
 		var q = ((_elm_lang$core$Native_Utils.cmp(queue.size, 0) > 0) && _elm_lang$core$Native_Utils.eq(queue.head, queue.tail)) ? _eduardoklosowski$arrayqueue_elm$Main$resize(queue) : queue;
-		var plusTail = q.tail + 1;
-		var newTail = _elm_lang$core$Native_Utils.eq(
-			plusTail,
-			_elm_lang$core$Array$length(q.array)) ? 0 : plusTail;
+		var newTail = A2(
+			_elm_lang$core$Basics_ops['%'],
+			q.tail + 1,
+			_elm_lang$core$Array$length(q.array));
 		return _elm_lang$core$Native_Utils.update(
 			q,
 			{
