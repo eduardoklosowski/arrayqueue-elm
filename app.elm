@@ -37,14 +37,8 @@ enqueue n queue =
             else
                 queue
 
-        plusTail =
-            q.tail + 1
-
         newTail =
-            if plusTail == (Array.length q.array) then
-                0
-            else
-                plusTail
+            (q.tail + 1) % (Array.length q.array)
     in
         { q
             | array = Array.set q.tail (Just n) q.array
@@ -58,13 +52,16 @@ dequeue queue =
     let
         e =
             front queue
+
+        newHead =
+            (queue.head + 1) % (Array.length queue.array)
     in
         case e of
             Just n ->
                 ( Just n
                 , { queue
                     | array = Array.set queue.head Nothing queue.array
-                    , head = queue.head + 1
+                    , head = newHead
                     , size = queue.size - 1
                   }
                 )
